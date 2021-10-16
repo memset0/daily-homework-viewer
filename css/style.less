@@ -1,0 +1,29 @@
+@navbar-height: 80px;
+
+html,
+body,
+.container {
+	height: 100%;
+}
+
+.viewer {
+	height: calc(100% - @navbar-height);
+}
+
+.navbar {
+	height: @navbar-height;
+	overflow-x: scroll;
+	white-space: nowrap;
+
+	&::-webkit-scrollbar {
+		width: 0 !important;
+	}
+
+
+	.nav-button {
+		height: calc(@navbar-height - 40px);
+		margin: 20px 10px;
+		padding: 0 20px;
+		border: none;
+	}
+}
